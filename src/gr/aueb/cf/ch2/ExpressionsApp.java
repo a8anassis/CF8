@@ -35,13 +35,16 @@ public class ExpressionsApp {
 
         System.out.printf("Result1: %d, Result2: %d", result1, result2);
 
+        result1++;  // 14
+        result2--;  // 14
+        ++result1;  // 15
+        --result2;  // 13
 
+        System.out.printf("Result1: %d, Result2: %d", result1, result2);
 
+        result1 = num1++;   // result1 = 25  , num1 = 26
+        result2 = ++num2;   // result2 = 11 , num2 = 11
 
-
-
-
-
-
+        System.out.printf("Result1: %d, Result2: %d", result1, result2);
     }
 }
