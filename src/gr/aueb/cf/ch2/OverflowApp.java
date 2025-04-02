@@ -9,7 +9,7 @@ public class OverflowApp {
     public static void main(String[] args) {
         int num1 = 2_147_483_647;
         int num2 = 100;
-        int result = 0;
+        int result;
 
         result = num1 * num2;
 
