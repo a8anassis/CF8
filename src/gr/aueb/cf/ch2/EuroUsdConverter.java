@@ -18,6 +18,7 @@ public class EuroUsdConverter {
         int usaDollars = 0;
         int usaCents = 0;
         final int PARITY = 99;
+        final int USA_CENTS_PER_EURO = 100;
         Scanner in = new Scanner(System.in);
 
         // Εντολές
@@ -25,8 +26,8 @@ public class EuroUsdConverter {
         inputEuros = in.nextInt();
 
         totalUsdCents = inputEuros * PARITY;    // magic number
-        usaDollars = totalUsdCents / 100;
-        usaCents = totalUsdCents % 100;
+        usaDollars = totalUsdCents / USA_CENTS_PER_EURO;
+        usaCents = totalUsdCents % USA_CENTS_PER_EURO;
 
         System.out.printf("%d \u20AC = %d \u0024, %d usa cents", inputEuros, usaDollars, usaCents);
     }
