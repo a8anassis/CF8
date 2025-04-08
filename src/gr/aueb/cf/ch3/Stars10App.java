@@ -12,7 +12,7 @@ public class Stars10App {
 
         while (i <= 10) {
             System.out.print("*");
-            i++;
+            i++;    // ίδιο με i = i + 1 ή και i += 1 αλλά το πιο σύντομο είναι i++
         }
     }
 }
