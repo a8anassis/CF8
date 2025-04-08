@@ -11,7 +11,7 @@ public class RandomApp {
 
         // (max - min + 1) + min
         die = (int) (Math.random() * 6) + 1;
-
+        // (type) value
         System.out.println(die);
     }
 }
