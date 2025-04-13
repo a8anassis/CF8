@@ -24,5 +24,7 @@ public class MinValue {
 //        }
 
         min = (num1 < num2) ? num1 : num2;
+
+        System.out.printf("Min: %d", min);
     }
 }
