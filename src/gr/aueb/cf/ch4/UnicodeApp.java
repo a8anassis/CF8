@@ -6,8 +6,8 @@ package gr.aueb.cf.ch4;
 public class UnicodeApp {
 
     public static void main(String[] args) {
-        int codePoint = 0x1F60A;    // U+D83D U+DE03
+        int codePoint = 0x1F60A;    // U+D83D U+DE03, smiley
         System.out.println(Character.toChars(codePoint));
-        System.out.println("\u20ac");
+        System.out.println("\u20ac");   // euro sign
     }
 }
