@@ -24,12 +24,12 @@ public class MenuIf {
 
             if (choice < 1 || choice > 5) {
                 System.out.println("Λάθος επιλογή");
-                continue;
+                continue; // jump to while next loop immediately
             }
 
             if (choice == 5) {
                 System.out.println("Ευχαριστούμε. ");
-                break;
+                break;  // φεύγει από τη while
             }
 
             if (choice == 1) {
