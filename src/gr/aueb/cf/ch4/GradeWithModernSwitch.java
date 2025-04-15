@@ -20,7 +20,9 @@ public class GradeWithModernSwitch {
         grade = scanner.nextInt();
 
         switch (grade) {
-            case 1, 2, 3, 4 -> System.out.println("Αποτυχία");
+            case 1, 2, 3, 4 -> {
+                System.out.println("Αποτυχία");
+            }
             case 5, 6 -> System.out.println("Καλώς");
             case 7, 8 -> System.out.println("Πολύ Καλά");
             case 9, 10 -> System.out.println("Άριστα");
