@@ -1,5 +1,6 @@
 package gr.aueb.cf.ch4;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 /**
@@ -11,6 +12,7 @@ public class PowerApp {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        BigInteger bigResult = new BigInteger("1");
         int base;
         int power;
         int result = 1;
@@ -19,9 +21,12 @@ public class PowerApp {
         base = scanner.nextInt();
         power = scanner.nextInt();
 
-        // for
+        for (int i = 1; i <= power; i++) {
+            result = result * base;
+            bigResult = bigResult.multiply(BigInteger.valueOf(base));
+        }
 
-
-        System.out.printf("%d^%d = %d", base,power, result);
+        System.out.printf("%d^%d = %d\n", base,power, result);
+        System.out.println("Big Result: " + bigResult);
     }
 }
