@@ -28,6 +28,7 @@ public class Calculator {
         }
     }
 
+
     public static void printMenu() {
         System.out.println("Επιλέξτε ένα από τα παρακάτω");
         System.out.println("1. Πρόσθεση");
@@ -54,5 +55,4 @@ public class Calculator {
     public static boolean isExit(int choice) {
         return choice == 6;
     }
-
 }
