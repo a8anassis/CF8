@@ -20,7 +20,7 @@ public class AddSubWithMethodsApp {
         num2 = scanner.nextInt();
 
         sum = add(num1, num2);      // invoke - call the add method
-        sub = AddSubWithMethodsApp.sub(num2, num1);
+        sub = sub(num2, num1);
 
         System.out.println("Sum: " + sum);
         System.out.println("Sub: " + sub);
