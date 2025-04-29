@@ -8,7 +8,17 @@ package gr.aueb.cf.ch6;
 public class ArraySearch {
 
     public static void main(String[] args) {
+        int position;
+        int value = 233;
+        int[] arr = {1, 2, 23};
 
+        position = getPosition(arr, value);
+
+        if (position == -1) {
+            System.out.println("Not Found");
+        } else {
+            System.out.println("Found. Position= " + (position + 1) + ", value= " + arr[position]);
+        }
     }
 
     /**
