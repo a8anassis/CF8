@@ -2,7 +2,7 @@ package gr.aueb.cf.ch6;
 
 /**
  * Όταν κάνουμε copy references, τότε το copy
- * ονομάζεται shallow και έχει side effects.
+ * ονομάζεται shallow copy και έχει side effects.
  */
 public class ArrayShallowCopy {
 
