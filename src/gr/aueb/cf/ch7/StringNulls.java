@@ -10,6 +10,12 @@ public class StringNulls {
         String s2 = null;       // s2 == null
         String s3 = "";         // empty String -> s3.length() == 0
 
+        if (s2 == null) {
+            System.out.println("something...");
+        } else {
+            System.out.println("....");
+        }
+
        if (s3.isEmpty()) {  // if (s3.length() == 0
            System.out.println("is empty");
        } else {
