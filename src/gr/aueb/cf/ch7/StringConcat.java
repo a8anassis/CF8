@@ -14,5 +14,7 @@ public class StringConcat {
 
         String s5 = s1 + " " + s2;
         String s6 = s1.concat(" ").concat(s2);  // chaining
+
+        System.out.println("*".repeat(10));
     }
 }
