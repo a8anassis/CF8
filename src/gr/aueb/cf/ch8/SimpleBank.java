@@ -18,9 +18,11 @@ public class SimpleBank {
     }
 
     /**
-     * Deposits a certain amount of money.
-     *
-     * @param amount    the amount of money.
+     * Deposits an amount of money to an account.
+     * @param amount
+     *          the amount of money.
+     * @throws Exception
+     *          if the amount is negative.
      */
     public static void deposit(double amount) throws Exception {
         try {
