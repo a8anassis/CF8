@@ -2,6 +2,7 @@ package gr.aueb.cf.ch9;
 
 import java.io.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class FileBinaryApp {
 
@@ -37,6 +38,17 @@ public class FileBinaryApp {
             elapsedTime = (end - start) / 1000.0;
             System.out.printf("Το αρχείο με μέγεθος %.2f (%d bytes) αντιγράφηκε επιτυχώς\n", (counter / 1024.0), counter);
             System.out.println("Elapsed Time: " + elapsedTime + " seconds");
+
+            File inFd = new File(inputFile);
+            File outFd = new File(outputFile);
+            System.out.println("Input File Absolute Path: " + inFd.getAbsolutePath());
+            System.out.println("Output File Absolute Path: " + outFd.getAbsolutePath());
+
+            // Hint for random output paths
+            String outputRandomPath = outputFile + UUID.randomUUID().toString().replaceAll("-", "");
+            File randomFile = new File(outputRandomPath);
+            FileOutputStream bos2 = new FileOutputStream(randomFile);
+
         } catch (IOException e) {
             System.err.println(LocalDateTime.now() + "\n" + e);
             throw e;
