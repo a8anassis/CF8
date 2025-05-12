@@ -41,7 +41,7 @@ public class FileWritersApp {
             bw.newLine();
             bw.flush();
         } catch (IOException e) {
-            System.out.println(LocalDateTime.now() + "\n" + e);
+            System.err.println(LocalDateTime.now() + "\n" + e);
             throw e;
         }
     }
@@ -52,7 +52,7 @@ public class FileWritersApp {
            ps.println("Printing with print stream");
            ps.flush();
         } catch (IOException e) {
-            System.out.println(LocalDateTime.now() + "\n" + e);
+            System.err.println(LocalDateTime.now() + "\n" + e);
             throw e;
         }
     }
@@ -63,7 +63,7 @@ public class FileWritersApp {
             ps.println("Printing with print stream");
             ps.flush();
         } catch (IOException e) {
-            System.out.println(LocalDateTime.now() + "\n" + e);
+            System.err.println(LocalDateTime.now() + "\n" + e);
             throw e;
         }
     }
