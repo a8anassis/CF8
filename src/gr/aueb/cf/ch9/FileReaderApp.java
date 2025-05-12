@@ -1,9 +1,6 @@
 package gr.aueb.cf.ch9;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.Scanner;
@@ -39,15 +36,18 @@ public class FileReaderApp {
         }
     }
 
-    public static void bufferedRead(File file) {
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+    public static void bufferedRead(File file) throws IOException {
+//        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))) {
+
             String line;
 
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
         } catch (IOException e) {
-
+            System.err.println(LocalDateTime.now() + "\n" + e);
+            throw e;
         }
     }
 }
