@@ -12,12 +12,12 @@ public class FileBinaryApp {
         try {
             binaryInputReadWrite(inputFile, outputFile);
         } catch (IOException e) {
-            System.out.println("Η αντιγραφή του αρχείου απέτυχε.");
+            System.err.println("Η αντιγραφή του αρχείου απέτυχε.");
         }
     }
 
     public static void binaryInputReadWrite(String inputFile, String outputFile) throws IOException {
-        final int BUFFER_SIZE = 4096;   // 4KB buffer
+        final int BUFFER_SIZE = 8192;   // 8KB buffer
         byte[] buffer = new byte[BUFFER_SIZE];
         int bytesRead;
         long start;
@@ -35,7 +35,7 @@ public class FileBinaryApp {
             }
             end = System.currentTimeMillis();
             elapsedTime = (end - start) / 1000.0;
-            System.out.printf("Το αρχείο με μέγεθος %.2f (%d bytes) αντιγράφηκε επιτυχώς", (counter / 1024.0), counter);
+            System.out.printf("Το αρχείο με μέγεθος %.2f (%d bytes) αντιγράφηκε επιτυχώς\n", (counter / 1024.0), counter);
             System.out.println("Elapsed Time: " + elapsedTime + " seconds");
         } catch (IOException e) {
             System.err.println(LocalDateTime.now() + "\n" + e);
