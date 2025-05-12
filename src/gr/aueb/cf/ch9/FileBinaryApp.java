@@ -6,23 +6,37 @@ import java.time.LocalDateTime;
 public class FileBinaryApp {
 
     public static void main(String[] args) {
+        String inputFile = "C:/tmp/dummy.pdf";
+        String outputFile = "C:/tmp/dummy-out.pdf";
 
+        try {
+            binaryInputReadWrite(inputFile, outputFile);
+        } catch (IOException e) {
+            System.out.println("Η αντιγραφή του αρχείου απέτυχε.");
+        }
     }
 
     public static void binaryInputReadWrite(String inputFile, String outputFile) throws IOException {
-
         final int BUFFER_SIZE = 4096;   // 4KB buffer
         byte[] buffer = new byte[BUFFER_SIZE];
         int bytesRead;
+        long start;
+        long end;
+        double elapsedTime;
+        int counter = 0;
 
         try (FileInputStream fis = new FileInputStream(inputFile);
              FileOutputStream fos = new FileOutputStream(outputFile)) {
 
+            start = System.currentTimeMillis();
             while ((bytesRead = fis.read(buffer)) != -1) {
                 fos.write(buffer, 0, bytesRead);
+                counter += bytesRead;
             }
-
-            System.out.println("File copied successfully");
+            end = System.currentTimeMillis();
+            elapsedTime = (end - start) / 1000.0;
+            System.out.printf("Το αρχείο με μέγεθος %.2f (%d bytes) αντιγράφηκε επιτυχώς", (counter / 1024.0), counter);
+            System.out.println("Elapsed Time: " + elapsedTime + " seconds");
         } catch (IOException e) {
             System.err.println(LocalDateTime.now() + "\n" + e);
             throw e;
