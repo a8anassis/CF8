@@ -45,9 +45,9 @@ public class FileBinaryApp {
             System.out.println("Output File Absolute Path: " + outFd.getAbsolutePath());
 
             // Hint for random output paths
-            String outputRandomPath = outputFile + UUID.randomUUID().toString().replaceAll("-", "");
-            File randomFile = new File(outputRandomPath);
-            FileOutputStream bos2 = new FileOutputStream(randomFile);
+//            String outputRandomPath = outputFile + UUID.randomUUID().toString().replaceAll("-", "");
+//            File randomFile = new File(outputRandomPath);
+//            FileOutputStream bos2 = new FileOutputStream(randomFile);
 
         } catch (IOException e) {
             System.err.println(LocalDateTime.now() + "\n" + e);
