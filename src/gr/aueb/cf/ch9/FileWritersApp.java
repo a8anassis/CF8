@@ -14,6 +14,14 @@ public class FileWritersApp {
         } catch (IOException e) {
             System.out.println("Το αρχείο δεν δημιουργήθηκε ή κάποιο λάθος συνέβη.");
         }
+
+        try {
+            PrintStream ps = new PrintStream("C:/tmp/test.txt", StandardCharsets.UTF_8);
+            sayHello(ps);
+            sayHello(System.out);
+        } catch (IOException e) {
+            System.out.println("Το αρχείο δεν δημιουργήθηκε ή κάποιο λάθος συνέβη.");
+        }
     }
 
     public static void fileWriter(String file) throws IOException {
@@ -48,4 +56,13 @@ public class FileWritersApp {
             throw e;
         }
     }
+
+    /**
+     *
+     * @param ps
+     */
+    public static void sayHello(PrintStream ps) {
+        ps.println("Hello CF!");
+    }
+
 }
