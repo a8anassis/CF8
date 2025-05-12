@@ -57,6 +57,17 @@ public class FileWritersApp {
         }
     }
 
+    public static void printWriter(String file) throws IOException {
+//        try (PrintStream ps = new PrintStream(file, StandardCharsets.UTF_8)) {
+        try (PrintWriter ps = new PrintWriter(new FileOutputStream(file, true), false, StandardCharsets.UTF_8)) {   // true is append
+            ps.println("Printing with print stream");
+            ps.flush();
+        } catch (IOException e) {
+            System.out.println(LocalDateTime.now() + "\n" + e);
+            throw e;
+        }
+    }
+
     /**
      *
      * @param ps
