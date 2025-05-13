@@ -18,8 +18,7 @@ public class CopyAttachedWithMetadata {
         userInputFile = in.nextLine();
 
         inputFile = inputPath + userInputFile;
-//        outFile = outPath +  LocalDateTime.now().toString().replace(":", "_") + userInputFile;
-        outFile = outPath +  UUID.randomUUID().toString().replace(":", "_") + userInputFile;
+        outFile = outPath +  UUID.randomUUID().toString().replaceAll(":", "_") + userInputFile;
 
         File inFd = new File(inputFile);
         File outFd = new File(outFile);
