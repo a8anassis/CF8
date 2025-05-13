@@ -22,9 +22,9 @@ public class CopyAttachedWithMetadata {
         String extension = "";
         int dotIndex = inputFile.lastIndexOf('.');
         if (dotIndex > 0 && dotIndex < inputFile.length() - 1) {
-            extension = inputFile.substring(dotIndex + 1);
+            extension = inputFile.substring(dotIndex);
         }
-        outFile = UUID.randomUUID().toString().replace("-", "") + extension;
+        outFile = outPath + UUID.randomUUID().toString().replace("-", "") + extension;
 
         File inFd = new File(inputFile);
         File outFd = new File(outFile);
@@ -38,9 +38,7 @@ public class CopyAttachedWithMetadata {
             }
             System.out.println(inFd.getAbsolutePath());
             System.out.println(outFd.getAbsolutePath());
-
-
-            System.out.println(extension);
+            System.out.println("Extension alone: " + extension);
         } catch (IOException e) {
             e.printStackTrace();
         }
