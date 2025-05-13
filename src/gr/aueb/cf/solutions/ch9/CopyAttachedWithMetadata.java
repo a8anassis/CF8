@@ -17,8 +17,14 @@ public class CopyAttachedWithMetadata {
         System.out.println("Insert input file name");
         userInputFile = in.nextLine();
 
+
         inputFile = inputPath + userInputFile;
-        outFile = outPath +  UUID.randomUUID().toString().replaceAll(":", "_") + userInputFile;
+        String extension = "";
+        int dotIndex = inputFile.lastIndexOf('.');
+        if (dotIndex > 0 && dotIndex < inputFile.length() - 1) {
+            extension = inputFile.substring(dotIndex + 1);
+        }
+        outFile = UUID.randomUUID().toString().replace("-", "") + extension;
 
         File inFd = new File(inputFile);
         File outFd = new File(outFile);
@@ -33,11 +39,7 @@ public class CopyAttachedWithMetadata {
             System.out.println(inFd.getAbsolutePath());
             System.out.println(outFd.getAbsolutePath());
 
-            String extension = "";
-            int dotIndex = inputFile.lastIndexOf('.');
-            if (dotIndex > 0 && dotIndex < inputFile.length() - 1) {
-                extension = inputFile.substring(dotIndex + 1);
-            }
+
             System.out.println(extension);
         } catch (IOException e) {
             e.printStackTrace();
