@@ -4,7 +4,7 @@ public class Customer {
     private int id;
     private String firstname;
     private String lastname;
-    private String  vat;
+    private String afm;
     private String phoneNo;
     private String region;
     private String prefecture;
@@ -17,12 +17,12 @@ public class Customer {
 
     }
 
-    public Customer(int id, String firstname, String lastname, String vat, String phoneNo, String region,
-                    String prefecture, String city, String street, String streetNo, String zipCode) {
+    public Customer(int id, String firstname, String lastname, String afm,
+                    String phoneNo, String region, String prefecture, String city, String street, String streetNo, String zipCode) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
-        this.vat = vat;
+        this.afm = afm;
         this.phoneNo = phoneNo;
         this.region = region;
         this.prefecture = prefecture;
@@ -56,12 +56,12 @@ public class Customer {
         this.lastname = lastname;
     }
 
-    public String getVat() {
-        return vat;
+    public String getAfm() {
+        return afm;
     }
 
-    public void setVat(String vat) {
-        this.vat = vat;
+    public void setAfm(String afm) {
+        this.afm = afm;
     }
 
     public String getPhoneNo() {
