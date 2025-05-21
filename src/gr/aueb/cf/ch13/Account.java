@@ -68,4 +68,28 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+
+
+    // Public API
+
+    /**
+     * Deposits a certain amount of money.
+     *
+     * @param amount        the amount of money to be deposited.
+     * @throws Exception    if the amount is negative.
+     */
+    public void deposit(double amount) throws Exception {
+        try {
+            if ( amount < 0) {
+                throw new Exception("Negative amount is not valid.");
+            }
+            balance += amount;
+        } catch (Exception e) {
+            System.err.println("Negative amount= " + amount + " is not valid.");
+            throw e;
+        }
+    }
+
+
+
 }
