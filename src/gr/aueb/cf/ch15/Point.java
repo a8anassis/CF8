@@ -18,4 +18,16 @@ public class Point {
     public void setX(double x) {
         this.x = x;
     }
+
+    public void movePlusOne() {
+        x += 1;
+    }
+
+    protected void movePlus10() {
+        x += 10;
+    }
+
+    private void reset() {
+        x = 0;
+    }
 }
