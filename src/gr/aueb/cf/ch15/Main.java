@@ -37,6 +37,6 @@ public class Main {
 
 
     public static void doMovePlusOne(Point point) {
-        point.movePlusOne();
+        point.movePlusOne();            // late-binding, @runtime
     }
 }

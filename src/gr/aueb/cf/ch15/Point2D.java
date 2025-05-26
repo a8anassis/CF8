@@ -4,6 +4,7 @@ public class Point2D extends Point {
     private double y;
 
     public Point2D() {
+        super();
     }
 
     public Point2D(double x, double y) {
