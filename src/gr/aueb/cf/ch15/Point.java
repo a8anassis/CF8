@@ -30,4 +30,9 @@ public class Point {
     private void reset() {
         x = 0;
     }
+
+    @Override
+    public String toString() {
+        return "{" + x + "}";
+    }
 }
