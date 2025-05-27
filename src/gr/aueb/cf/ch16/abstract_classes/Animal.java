@@ -1,7 +1,6 @@
 package gr.aueb.cf.ch16.abstract_classes;
 
 public abstract class Animal {
-
     private long id;
     private String name;
 
