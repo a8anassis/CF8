@@ -51,10 +51,10 @@ public class Product implements Comparable<Product> {
     }
 
 
-//    @Override
-//    public int compareTo(@NotNull Product other) {
-//        return this.description.compareTo(other.description);
-//    }
+    @Override
+    public int compareTo(@NotNull Product other) {
+        return this.description.compareTo(other.description);
+    }
 
 
 //    @Override
@@ -70,8 +70,8 @@ public class Product implements Comparable<Product> {
 //    }
 
 
-    @Override
-    public int compareTo(@NotNull Product other) {
-        return Double.compare(this.price, other.price);
-    }
+//    @Override
+//    public int compareTo(@NotNull Product other) {
+//        return Double.compare(this.price, other.price);
+//    }
 }
