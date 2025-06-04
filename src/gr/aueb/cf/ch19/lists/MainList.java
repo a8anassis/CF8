@@ -53,8 +53,7 @@ public class MainList {
 //                it.remove();
 //            }
 //        }
-        cities.removeIf(c -> c.startsWith("A"));
+        cities.removeIf((c) -> c.startsWith("A"));
         cities.forEach(System.out::println);
-
     }
 }
