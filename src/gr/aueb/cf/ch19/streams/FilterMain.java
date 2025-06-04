@@ -15,5 +15,8 @@ public class FilterMain {
         var filteredCities2 = cities.stream()
                 .filter(city -> city.startsWith("T"))
                 .collect(Collectors.toList());  // mutable list
+
+        filteredCities.forEach(System.out::println);
+        filteredCities2.forEach(System.out::println);
     }
 }
