@@ -13,7 +13,7 @@ public class MapMain {
                 new Product("Oranges", 8.2, 35), new Product("Apples", 22.5, 100),
                 new Product("Honey", 8.2, 35)));
 
-        ArrayList<String> listOfProductDescriptions = products.stream()
+        var listOfProductDescriptions = products.stream()
                 .map(Product::getDescription)
                 .collect(Collectors.toCollection(ArrayList::new));
         listOfProductDescriptions.forEach(System.out::println);

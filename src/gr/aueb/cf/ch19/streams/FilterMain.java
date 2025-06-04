@@ -12,7 +12,7 @@ public class FilterMain {
                 .filter(city -> city.startsWith("T"))   // Predicate = boolean function
                 .toList();  // immutable list
 
-        var filteredCities2 = cities.stream()
+        Iterable<String > filteredCities2 = cities.stream()
                 .filter(city -> city.startsWith("T"))
                 .collect(Collectors.toList());  // mutable list
 
