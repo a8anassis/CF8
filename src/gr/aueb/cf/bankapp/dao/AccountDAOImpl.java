@@ -22,7 +22,7 @@ public class AccountDAOImpl implements IAccountDAO {
 
     @Override
     public void remove(String iban) {
-
+        accounts.removeIf(a -> a.getIban().equals(iban));
     }
 
     @Override
