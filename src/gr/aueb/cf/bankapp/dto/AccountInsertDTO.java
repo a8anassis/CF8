@@ -32,7 +32,7 @@ public class AccountInsertDTO {
     }
 
     @Override
-    public String toString() {
+    public String  toString() {
         return "AccountInsertDTO{" +
                 "iban='" + iban + '\'' +
                 ", balance=" + balance +
