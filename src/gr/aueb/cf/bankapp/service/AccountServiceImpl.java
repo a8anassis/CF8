@@ -12,7 +12,9 @@ import gr.aueb.cf.bankapp.model.Account;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AccountServiceImpl implements IAccountService {
     private final IAccountDAO accountDAO;
@@ -96,6 +98,18 @@ public class AccountServiceImpl implements IAccountService {
 
     @Override
     public List<AccountReadOnlyDTO> getAccounts() {
-        return List.of();
+        return accountDAO.getAccounts()
+                .stream()
+                .map(Mapper::mapToReadOnlyDTO)
+                .collect(Collectors.toList());
+
+//        List<AccountReadOnlyDTO> readOnlyDTOS = new ArrayList<>();
+//        List<Account> accounts = accountDAO.getAccounts();
+//
+//        for (Account account : accounts) {
+//            AccountReadOnlyDTO readOnlyDTO = Mapper.mapToReadOnlyDTO(account);
+//            readOnlyDTOS.add(readOnlyDTO);
+//        }
+//        return readOnlyDTOS;
     }
 }
