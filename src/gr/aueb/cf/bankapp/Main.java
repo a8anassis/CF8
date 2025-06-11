@@ -21,6 +21,7 @@ public class Main {
 
     public static void main(String[] args) {
         String option;
+        String iban;
 
         while (true) {
             printMenu();
@@ -30,7 +31,7 @@ public class Main {
                 switch (option) {
                     case "1":
                         System.out.print("Παρακαλώ εισάγετε το iban: ");
-                        String iban = scanner.nextLine();
+                        iban = scanner.nextLine();
                         System.out.println("Παρακαλώ εισάγετε το υπόλοιπο: ");
                         BigDecimal initialBalance = new BigDecimal(scanner.nextLine());
                         AccountInsertDTO accountInsertDTO = new AccountInsertDTO(iban, initialBalance);
@@ -49,8 +50,30 @@ public class Main {
                         System.out.println("Ο λογαριασμός δημιουργήθηκε επιτυχώς");
                         break;
                     case "2":
+                        System.out.print("Παρακαλώ εισάγετε το iban: ");
+                        iban = scanner.nextLine();
+                        System.out.println("Παρακαλώ εισάγετε το ποσό κατάθεσης: ");
+                        BigDecimal depositAmount = new BigDecimal(scanner.nextLine());
+
+                        accountService.deposit(iban, depositAmount);
+                        System.out.println("Επιτυχής κατάθεση");
+                        break;
                     case "3":
+                        System.out.print("Παρακαλώ εισάγετε το iban: ");
+                        iban = scanner.nextLine();
+                        System.out.println("Παρακαλώ εισάγετε το ποσό ανάληψης: ");
+                        BigDecimal withdrawAmount = new BigDecimal(scanner.nextLine());
+
+                        accountService.withdraw(iban, withdrawAmount);
+                        System.out.println("Επιτυχής ανάληψη");
+                        break;
                     case "4":
+                        System.out.print("Παρακαλώ εισάγετε το iban: ");
+                        iban = scanner.nextLine();
+
+                        BigDecimal balance = accountService.getBalance(iban);
+                        System.out.println("Υπόλοιπο: " + balance);
+                        break;
                     case "5":
                     case "6":
                     default:
