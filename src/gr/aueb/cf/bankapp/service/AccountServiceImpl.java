@@ -77,6 +77,7 @@ public class AccountServiceImpl implements IAccountService {
             throw e;
         } catch (InsufficientBalanceException e) {
             System.err.printf("%s. The amount=%f is greater than balance. \n%s", LocalDateTime.now(), amount, e);
+            throw e;
         }
     }
 
@@ -84,9 +85,12 @@ public class AccountServiceImpl implements IAccountService {
     public BigDecimal getBalance(String iban)
             throws AccountNotFoundException {
         try {
-
+            Account account = accountDAO.getByIban(iban)
+                    .orElseThrow(() -> new AccountNotFoundException("Account with iban " + iban + " not found."));
+            return account.getBalance();
         } catch (AccountNotFoundException e) {
-
+            System.err.printf("%s. The account with iban=%s not found. \n%s", LocalDateTime.now(), iban, e);
+            throw e;
         }
     }
 
