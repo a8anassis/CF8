@@ -1,18 +1,16 @@
 package gr.aueb.cf.bankapp.service;
 
-import gr.aueb.cf.bankapp.dao.AccountDAOImpl;
 import gr.aueb.cf.bankapp.dao.IAccountDAO;
 import gr.aueb.cf.bankapp.dto.AccountInsertDTO;
 import gr.aueb.cf.bankapp.dto.AccountReadOnlyDTO;
-import gr.aueb.cf.bankapp.exceptions.AccountNotFoundException;
-import gr.aueb.cf.bankapp.exceptions.InsufficientBalanceException;
-import gr.aueb.cf.bankapp.exceptions.NegativeAmountException;
-import gr.aueb.cf.bankapp.mapper.Mapper;
+import gr.aueb.cf.bankapp.core.exceptions.AccountNotFoundException;
+import gr.aueb.cf.bankapp.core.exceptions.InsufficientBalanceException;
+import gr.aueb.cf.bankapp.core.exceptions.NegativeAmountException;
+import gr.aueb.cf.bankapp.core.mapper.Mapper;
 import gr.aueb.cf.bankapp.model.Account;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

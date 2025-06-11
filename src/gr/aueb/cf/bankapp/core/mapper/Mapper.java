@@ -1,4 +1,4 @@
-package gr.aueb.cf.bankapp.mapper;
+package gr.aueb.cf.bankapp.core.mapper;
 
 import gr.aueb.cf.bankapp.dto.AccountInsertDTO;
 import gr.aueb.cf.bankapp.dto.AccountReadOnlyDTO;

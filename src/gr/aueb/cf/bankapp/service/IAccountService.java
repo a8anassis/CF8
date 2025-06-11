@@ -2,9 +2,9 @@ package gr.aueb.cf.bankapp.service;
 
 import gr.aueb.cf.bankapp.dto.AccountInsertDTO;
 import gr.aueb.cf.bankapp.dto.AccountReadOnlyDTO;
-import gr.aueb.cf.bankapp.exceptions.AccountNotFoundException;
-import gr.aueb.cf.bankapp.exceptions.InsufficientBalanceException;
-import gr.aueb.cf.bankapp.exceptions.NegativeAmountException;
+import gr.aueb.cf.bankapp.core.exceptions.AccountNotFoundException;
+import gr.aueb.cf.bankapp.core.exceptions.InsufficientBalanceException;
+import gr.aueb.cf.bankapp.core.exceptions.NegativeAmountException;
 
 
 import java.math.BigDecimal;
