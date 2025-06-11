@@ -34,7 +34,7 @@ public class Main {
                     case "1":
                         System.out.print("Παρακαλώ εισάγετε το iban: ");
                         iban = scanner.nextLine();
-                        System.out.println("Παρακαλώ εισάγετε το υπόλοιπο: ");
+                        System.out.print("Παρακαλώ εισάγετε το υπόλοιπο: ");
                         BigDecimal initialBalance = new BigDecimal(scanner.nextLine());
                         AccountInsertDTO accountInsertDTO = new AccountInsertDTO(iban, initialBalance);
 
@@ -54,7 +54,7 @@ public class Main {
                     case "2":
                         System.out.print("Παρακαλώ εισάγετε το iban: ");
                         iban = scanner.nextLine();
-                        System.out.println("Παρακαλώ εισάγετε το ποσό κατάθεσης: ");
+                        System.out.print("Παρακαλώ εισάγετε το ποσό κατάθεσης: ");
                         BigDecimal depositAmount = new BigDecimal(scanner.nextLine());
 
                         accountService.deposit(iban, depositAmount);
@@ -63,7 +63,7 @@ public class Main {
                     case "3":
                         System.out.print("Παρακαλώ εισάγετε το iban: ");
                         iban = scanner.nextLine();
-                        System.out.println("Παρακαλώ εισάγετε το ποσό ανάληψης: ");
+                        System.out.print("Παρακαλώ εισάγετε το ποσό ανάληψης: ");
                         BigDecimal withdrawAmount = new BigDecimal(scanner.nextLine());
 
                         accountService.withdraw(iban, withdrawAmount);
