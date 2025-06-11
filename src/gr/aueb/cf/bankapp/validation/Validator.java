@@ -26,6 +26,8 @@ public class Validator {
         if (dto.getBalance() == null || dto.getBalance().compareTo(BigDecimal.ZERO) < 0) {
             errors.put("balance", "Το αρχικό υπόλοιπο δεν μπορεί να είναι αρνητικό.");
         }
+
+        // Θα μπορούσαμε να ελέγξουμε αν το iban υπάρχει ήδη
         return errors;
     }
 }
