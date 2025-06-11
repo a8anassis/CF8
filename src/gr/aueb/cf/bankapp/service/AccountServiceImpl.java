@@ -75,12 +75,19 @@ public class AccountServiceImpl implements IAccountService {
         } catch (NegativeAmountException e) {
             System.err.printf("%s. The amount=%f is negative. \n%s", LocalDateTime.now(), amount, e);
             throw e;
+        } catch (InsufficientBalanceException e) {
+            System.err.printf("%s. The amount=%f is greater than balance. \n%s", LocalDateTime.now(), amount, e);
         }
     }
 
     @Override
-    public BigDecimal getBalance(String iban) throws AccountNotFoundException {
-        return null;
+    public BigDecimal getBalance(String iban)
+            throws AccountNotFoundException {
+        try {
+
+        } catch (AccountNotFoundException e) {
+
+        }
     }
 
     @Override
