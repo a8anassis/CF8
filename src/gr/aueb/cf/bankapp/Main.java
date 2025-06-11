@@ -6,11 +6,13 @@ import gr.aueb.cf.bankapp.core.exceptions.NegativeAmountException;
 import gr.aueb.cf.bankapp.dao.AccountDAOImpl;
 import gr.aueb.cf.bankapp.dao.IAccountDAO;
 import gr.aueb.cf.bankapp.dto.AccountInsertDTO;
+import gr.aueb.cf.bankapp.dto.AccountReadOnlyDTO;
 import gr.aueb.cf.bankapp.service.AccountServiceImpl;
 import gr.aueb.cf.bankapp.service.IAccountService;
 import gr.aueb.cf.bankapp.validation.Validator;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -75,7 +77,17 @@ public class Main {
                         System.out.println("Υπόλοιπο: " + balance);
                         break;
                     case "5":
+                        List<AccountReadOnlyDTO> readOnlyDTOS = accountService.getAccounts();
+                        if (readOnlyDTOS.isEmpty()) {
+                            System.out.println("Δεν βρέθηκαν λογαριασμοί");
+                        } else {
+                            readOnlyDTOS.forEach(System.out::println);
+                        }
+                        break;
                     case "6":
+                        System.out.println("Έξοδος...");
+                        scanner.close();
+                        return;
                     default:
                         System.out.println("Μη έγκυρη επιλογή. Προσπαθήστε ξανά.");
                 }
