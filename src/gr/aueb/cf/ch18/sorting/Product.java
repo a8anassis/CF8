@@ -1,6 +1,8 @@
-package gr.aueb.cf.ch19.streams;
+package gr.aueb.cf.ch18.sorting;
 
-public class Product {
+import org.jetbrains.annotations.NotNull;
+
+public class Product implements Comparable<Product> {
     private String description;
     private double price;
     private int quantity;
@@ -47,4 +49,29 @@ public class Product {
                 ", quantity=" + quantity +
                 '}';
     }
+
+
+    @Override
+    public int compareTo(@NotNull Product other) {
+        return this.description.compareTo(other.description);
+    }
+
+
+//    @Override
+//    public int compareTo(@NotNull Product other) {
+////        if (this.quantity < other.quantity) {
+////            return -1;
+////        } else if (this.quantity > other.quantity) {
+////            return 1;
+////        } else {
+////            return 0;
+////        }
+//        return this.quantity - other.quantity;
+//    }
+
+
+//    @Override
+//    public int compareTo(@NotNull Product other) {
+//        return Double.compare(this.price, other.price);
+//    }
 }

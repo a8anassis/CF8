@@ -1,8 +1,7 @@
-package gr.aueb.cf.ch19.lists;
+package gr.aueb.cf.ch18.lists;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 
 public class MainList {

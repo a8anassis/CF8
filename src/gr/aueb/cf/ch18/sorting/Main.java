@@ -1,4 +1,4 @@
-package gr.aueb.cf.ch19.sorting;
+package gr.aueb.cf.ch18.sorting;
 
 import java.util.ArrayList;
 import java.util.Comparator;

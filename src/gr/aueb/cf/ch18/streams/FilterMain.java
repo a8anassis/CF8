@@ -1,4 +1,4 @@
-package gr.aueb.cf.ch19.streams;
+package gr.aueb.cf.ch18.streams;
 
 import java.util.List;
 import java.util.stream.Collectors;

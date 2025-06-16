@@ -1,6 +1,6 @@
-package gr.aueb.cf.ch19.mobilecontacts.dao;
+package gr.aueb.cf.ch18.mobilecontacts.dao;
 
-import gr.aueb.cf.ch19.mobilecontacts.model.MobileContact;
+import gr.aueb.cf.ch18.mobilecontacts.model.MobileContact;
 
 import java.util.List;
 import java.util.Optional;

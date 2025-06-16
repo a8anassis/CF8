@@ -1,4 +1,4 @@
-package gr.aueb.cf.ch19.mobilecontacts.model;
+package gr.aueb.cf.ch18.mobilecontacts.model;
 
 import java.util.Objects;
 

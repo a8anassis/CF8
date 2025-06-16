@@ -1,6 +1,6 @@
-package gr.aueb.cf.ch19.streams;
+package gr.aueb.cf.ch18.streams;
 
-import gr.aueb.cf.ch19.sorting.Product;
+import gr.aueb.cf.ch18.sorting.Product;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package gr.aueb.cf.ch19.sets;
+package gr.aueb.cf.ch18.sets;
 
 import java.util.HashSet;
 import java.util.Set;

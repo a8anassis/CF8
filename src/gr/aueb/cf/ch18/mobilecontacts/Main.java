@@ -1,8 +1,8 @@
-package gr.aueb.cf.ch19.mobilecontacts;
+package gr.aueb.cf.ch18.mobilecontacts;
 
-import gr.aueb.cf.ch19.mobilecontacts.dao.IMobileContactDAO;
-import gr.aueb.cf.ch19.mobilecontacts.dao.MobileContactDAOImpl;
-import gr.aueb.cf.ch19.mobilecontacts.model.MobileContact;
+import gr.aueb.cf.ch18.mobilecontacts.dao.IMobileContactDAO;
+import gr.aueb.cf.ch18.mobilecontacts.dao.MobileContactDAOImpl;
+import gr.aueb.cf.ch18.mobilecontacts.model.MobileContact;
 
 public class Main {
     private static final IMobileContactDAO dao = new MobileContactDAOImpl();

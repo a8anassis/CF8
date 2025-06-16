@@ -1,4 +1,4 @@
-package gr.aueb.cf.ch19.maps;
+package gr.aueb.cf.ch18.maps;
 
 import java.util.HashMap;
 import java.util.Map;
