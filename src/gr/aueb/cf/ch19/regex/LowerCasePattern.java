@@ -1,6 +1,7 @@
 package gr.aueb.cf.ch19.regex;
 
-import java.nio.file.Pathimport java.util.regex.Pattern;
+
+import java.util.regex.Pattern;
 
 /**
  * Κάνει match 8 τουλάχιστον χαρακτήρες εκ των οποίων
