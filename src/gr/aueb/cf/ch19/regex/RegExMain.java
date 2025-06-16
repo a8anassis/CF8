@@ -4,11 +4,14 @@ public class RegExMain {
 
     public static void main(String[] args) {
         String s = "Hello";
+        String s2 = "Hello World";
 
-        System.out.println(isHello(s));
-        System.out.println(isHelloOrHi(s));
+        System.out.println(reverse(s2));
 
-        System.out.println(isHhello(s));
+//        System.out.println(isHello(s));
+//        System.out.println(isHelloOrHi(s));
+//
+//        System.out.println(isHhello(s));
     }
 
     public static boolean isHello(String s) {
@@ -46,6 +49,10 @@ public class RegExMain {
 
     public static boolean isDate(String s) {
         return s.matches("\\d{2}/\\d{2}/\\d{4}");       // dd/mm/yyyy
+    }
+
+    public static String reverse(String s) {
+        return s.replaceAll("(.*)\\s(.*)", "$2 $1");
     }
 
 }
