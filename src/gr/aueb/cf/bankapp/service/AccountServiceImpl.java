@@ -110,4 +110,8 @@ public class AccountServiceImpl implements IAccountService {
 //        }
 //        return readOnlyDTOS;
     }
+
+    public boolean isIBANExists(String iban) {
+        return accountDAO.getByIban(iban).isPresent();
+    }
 }

@@ -36,4 +36,10 @@ public class AccountDAOImpl implements IAccountDAO {
     public List<Account> getAccounts() {
         return new ArrayList<>(accounts);
     }
+
+    public boolean isIBANExists(String iban) {
+        return accounts.stream()
+                .anyMatch(a -> a.getIban()
+                        .equals(iban));
+    }
 }

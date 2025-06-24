@@ -17,5 +17,6 @@ public interface IAccountService {
     void withdraw(String iban, BigDecimal amount) throws NegativeAmountException, InsufficientBalanceException, AccountNotFoundException;
     BigDecimal getBalance(String iban) throws AccountNotFoundException;
     List<AccountReadOnlyDTO> getAccounts();
+    boolean isIBANExists(String iban);
     // more queries
 }
