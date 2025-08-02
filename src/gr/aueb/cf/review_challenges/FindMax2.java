@@ -48,7 +48,7 @@ public class FindMax2 {
         maxPosition = 0;
         max = arr[maxPosition];
 
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             if (arr[i] > max) {
                 maxPosition = i;
                 max = arr[maxPosition];

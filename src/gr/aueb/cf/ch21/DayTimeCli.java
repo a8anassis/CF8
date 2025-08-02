@@ -13,7 +13,8 @@ public class DayTimeCli {
         Socket socket = null;
 
         try {
-            InetAddress servAddress = InetAddress.getByName("time.nist.gov");
+//            InetAddress servAddress = InetAddress.getByName("time.nist.gov");
+            InetAddress servAddress = InetAddress.getByName("127.0.0.1");
             int servPort = 13;
 
             socket = new Socket(servAddress, servPort);
