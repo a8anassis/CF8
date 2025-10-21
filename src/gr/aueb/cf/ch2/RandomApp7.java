@@ -4,7 +4,7 @@ package gr.aueb.cf.ch2;
  * Προσομειώνει ένα τυχαίο ζάρι. Δηλαδή παράγει
  * ένα τυχαίο ακέραιο μεταξύ 1 - 6.
  */
-public class RandomApp {
+public class RandomApp7 {
 
     public static void main(String[] args) {
         int die = 0;

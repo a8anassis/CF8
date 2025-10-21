@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Η ισοτιμία είναι 99 USD cents = 1 Euro.
  * Εκτυπώνει το αποτέλεσμα.
  */
-public class EuroUsdConverter {
+public class EuroUsdConverter9 {
 
     public static void main(String[] args) {
 

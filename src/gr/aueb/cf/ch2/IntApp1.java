@@ -3,7 +3,7 @@ package gr.aueb.cf.ch2;
 /**
  * Demo class for Integer data types.
  */
-public class IntApp {
+public class IntApp1 {
 
     public static void main(String[] args) {
 

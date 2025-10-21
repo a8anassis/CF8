@@ -4,7 +4,7 @@ package gr.aueb.cf.ch2;
  * Demo για παραστάσεις ακεραίων με τη χρήση
  * αριθμητικών τελεστές.
  */
-public class ExpressionsApp {
+public class ExpressionsApp2 {
 
     public static void main(String[] args) {
         int num1 = 25;

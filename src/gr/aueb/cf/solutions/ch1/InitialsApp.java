@@ -3,6 +3,9 @@ package gr.aueb.cf.solutions.ch1;
 /**
  * Εκτυπώνει τα αρχικά του ονόματος
  * με αστεράκια.
+ *
+ * @author a8ana
+ * @version 1.0
  */
 public class InitialsApp {
 

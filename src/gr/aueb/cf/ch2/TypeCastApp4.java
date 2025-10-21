@@ -3,7 +3,7 @@ package gr.aueb.cf.ch2;
 /**
  * Typecast demo.
  */
-public class TypeCastApp {
+public class TypeCastApp4 {
 
     public static void main(String[] args) {
         int num1 = 10;

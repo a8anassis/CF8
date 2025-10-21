@@ -5,7 +5,7 @@ import java.math.BigInteger;
 /**
  * BigInteger class demo.
  */
-public class BigIntApp {
+public class BigIntApp3 {
 
     public static void main(String[] args) {
         BigInteger bigNum1 = new BigInteger("123456789123456789");

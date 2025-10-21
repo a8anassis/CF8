@@ -8,7 +8,7 @@ import java.util.Scanner;
  * θεωρούμε ότι 1 έτος = 365 ημέρες. Για παράδειγμα αν δοθεί
  * ηλικία 20 ετών, το αποτέλεσμα είναι 7300 ημέρες.
  */
-public class YearsToDays {
+public class YearsToDays10 {
 
     public static void main(String[] args) {
 
