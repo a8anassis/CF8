@@ -4,16 +4,16 @@ import java.time.LocalDateTime;
 
 /**
  * Η {@link SimpleBank} παρέχει μία μόνο υπηρεσία,
- * την υπηρεσία κατάθεσης (deposit).
+ * την υπηρεσία κατάθεσης (deposit) {@link SimpleBank#deposit(double)}.
  */
 public class SimpleBank {
     static double balance = 0;
 
     public static void main(String[] args)  {
         try {
-            deposit(100);
+            deposit(-100);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Δεν μπορεί να γίνει κατάθεση αρνητικού ποσού");
         }
     }
 
@@ -30,8 +30,17 @@ public class SimpleBank {
             balance += amount;
             // logging
         } catch (Exception e) {
-            System.err.println(LocalDateTime.now() + "\n" + e); // logging
+            System.err.println(LocalDateTime.now() + "\n" + e);     // logging
             throw e;
         }
+    }
+
+    public static String printLocalizedMessage(String lang) {
+        return switch (lang) {
+            case "el" -> "Δεν μπορεί να γίνει κατάθεση αρνητικού ποσού";
+            case "en" -> "Cannot deposit a negative amount";
+            case "de" -> "Es kann kein negativer Betrag eingezahlt werden";
+            default -> "Unknown language";
+        };
     }
 }

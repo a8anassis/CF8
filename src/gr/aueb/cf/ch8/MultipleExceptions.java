@@ -19,7 +19,7 @@ public class MultipleExceptions {
                 System.out.println("Παρακαλώ εισάγετε νέο ακέραιο");
             }
             System.out.println(numStr);
-        } catch (FileNotFoundException | InputMismatchException e) {
+        } catch (FileNotFoundException e) {
             System.out.println(LocalDateTime.now() + "Γενικό IO error\n" + e);
         } catch (IOException e) {
             System.out.println("Το αρχείο δεν βρέθηκε" + e);

@@ -17,7 +17,7 @@ public class ExceptionInputMismatch {
 
         while (!scanner.hasNextInt()) {
             System.out.println("Μη αποδεκτοί χαρακτήρες. Παρακαλώ εισάγετε ακέραιο");
-            scanner.nextLine();
+            scanner.nextLine();     // καταναλώνουμε το ακατάλληλο string
         }
         num1 = scanner.nextInt();
         System.out.println("Num: " + num1);
