@@ -25,7 +25,7 @@ public class FileWritersApp {
     }
 
     public static void fileWriter(String file) throws IOException {
-        try (FileWriter fw = new FileWriter(file, true)) {      // true is append
+        try (FileWriter fw = new FileWriter(file, StandardCharsets.UTF_8, true)) {      // true represents append
             fw.write("Coding!");
             fw.flush();
         }
@@ -36,7 +36,7 @@ public class FileWritersApp {
     }
 
     public static void bufferedWriter(File file) throws IOException {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, true))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file, StandardCharsets.UTF_8,  true))) {
             bw.write("Coding!");
             bw.newLine();
             bw.flush();
@@ -48,7 +48,8 @@ public class FileWritersApp {
 
     public static void printStream(String file) throws IOException {
 //        try (PrintStream ps = new PrintStream(file, StandardCharsets.UTF_8)) {
-        try (PrintStream ps = new PrintStream(new FileOutputStream(file, true), false, StandardCharsets.UTF_8)) {   // true is append
+        try (PrintStream ps = new PrintStream(
+                new FileOutputStream(file, true), false, StandardCharsets.UTF_8)) {   // true is append
            ps.println("Printing with print stream");
            ps.flush();
         } catch (IOException e) {
@@ -58,7 +59,7 @@ public class FileWritersApp {
     }
 
     public static void printWriter(String file) throws IOException {
-//        try (PrintStream ps = new PrintStream(file, StandardCharsets.UTF_8)) {
+//        try (PrintWriter ps = new PrintWriter(file, StandardCharsets.UTF_8)) {
         try (PrintWriter ps = new PrintWriter(new FileOutputStream(file, true), false, StandardCharsets.UTF_8)) {   // true is append
             ps.println("Printing with print stream");
             ps.flush();

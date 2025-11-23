@@ -11,8 +11,19 @@ public class FileReaderApp {
 
     }
 
+    public static void scannerRead(File file) throws IOException {
+        try (Scanner scanner = new Scanner(file, StandardCharsets.UTF_8)) {
+            while (scanner.hasNextLine()) {
+                System.out.println(scanner.nextLine());
+            }
+        } catch (IOException e) {
+            System.err.println(LocalDateTime.now() + "\n" + e);
+            throw e;
+        }
+    }
+
     public static void fileReaderRead(String file) throws IOException {
-        try (FileReader fr = new FileReader(file)) {
+        try (FileReader fr = new FileReader(file, StandardCharsets.UTF_8)) {
             int ch;
 
             while ((ch = fr.read()) != -1) {
@@ -25,20 +36,11 @@ public class FileReaderApp {
     }
 
 
-    public static void scannerRead(File file) throws IOException {
-        try (Scanner scanner = new Scanner(file, StandardCharsets.UTF_8)) {
-            while (scanner.hasNextLine()) {
-                System.out.println(scanner.nextLine());
-            }
-        } catch (IOException e) {
-            System.err.println(LocalDateTime.now() + "\n" + e);
-            throw e;
-        }
-    }
+
 
     public static void bufferedRead(File file) throws IOException {
-//        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8))) {
+//        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8))) {
 
             String line;
 
