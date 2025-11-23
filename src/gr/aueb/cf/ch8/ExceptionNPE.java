@@ -12,7 +12,7 @@ public class ExceptionNPE {
             System.exit(1);
         }
 
-        System.out.println(s);
+        System.out.println(s.equals("Hello"));
     }
 
     public static String getOneOrNull() {
