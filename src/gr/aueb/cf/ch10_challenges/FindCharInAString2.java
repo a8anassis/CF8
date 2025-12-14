@@ -7,10 +7,13 @@ public class FindCharInAString2 {
     }
 
     /**
-     * Λαμβάνει ως είσοδο ένα string s, το πλήθος των πρώτων γραμμάτων
+     * Λαμβάνει ως είσοδο ένα string s, το πλήθος των πρώτων γραμμάτων n
      * που θέλουμε να ελέγξουμε καθώς και τον χαρακτήρα αναζήτησης ch
      * και επιστρέφει το πλήθος των φορών που εμφανίζεται ο χαρακτήρας ch,
      * στους πρώτους n χαρακτήρες του string s.
+     *
+     * Αν το n είναι μεγαλύτερο από το length του string s, τότε
+     * αυξάνουμε το μήκος τους String τόσο ώστε να είναι ίσο ή να ξεπερνάει το n.
      *
      * @param s     το String εισόδου.
      * @param ch    ο χαρακτήρας εισόδου.
@@ -27,6 +30,7 @@ public class FindCharInAString2 {
             repeatedTimes = (int) Math.ceil((double) n / s.length());
             repeatedString = s.repeat(repeatedTimes);
         } else repeatedString = s;
+
         for (int i = 0; i < n; i++) {
             if (repeatedString.charAt(i) == ch) count++;
         }

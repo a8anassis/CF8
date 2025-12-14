@@ -1,7 +1,5 @@
 package gr.aueb.cf.ch10_challenges;
 
-import java.util.Arrays;
-
 public class AgeDiff {
 
     public static void main(String[] args) {
@@ -20,7 +18,7 @@ public class AgeDiff {
         }
 
         diff = maxAge - characterAge;
-        return (diff > 0) ? diff : 0;
+        return Math.max(diff, 0);
     }
 }
 

@@ -46,24 +46,24 @@ public class FileWritersApp {
         }
     }
 
-    public static void printStream(String file) throws IOException {
+    public static void printStream(String file) throws FileNotFoundException {
 //        try (PrintStream ps = new PrintStream(file, StandardCharsets.UTF_8)) {
         try (PrintStream ps = new PrintStream(
                 new FileOutputStream(file, true), false, StandardCharsets.UTF_8)) {   // true is append
            ps.println("Printing with print stream");
            ps.flush();
-        } catch (IOException e) {
+        } catch (FileNotFoundException e) {
             System.err.println(LocalDateTime.now() + "\n" + e);
             throw e;
         }
     }
 
-    public static void printWriter(String file) throws IOException {
+    public static void printWriter(String file) throws FileNotFoundException {
 //        try (PrintWriter ps = new PrintWriter(file, StandardCharsets.UTF_8)) {
         try (PrintWriter ps = new PrintWriter(new FileOutputStream(file, true), false, StandardCharsets.UTF_8)) {   // true is append
             ps.println("Printing with print stream");
             ps.flush();
-        } catch (IOException e) {
+        } catch (FileNotFoundException e) {
             System.err.println(LocalDateTime.now() + "\n" + e);
             throw e;
         }
