@@ -23,9 +23,9 @@ public class Main {
 
         products.sort(
                 Comparator.comparing(Product::getDescription)
-                        .thenComparing(Product::getQuantity)
+                        .thenComparing(Product::getQuantity, Comparator.reverseOrder())
                         .thenComparing(Product::getPrice)
-                        .reversed()
+//                        .reversed()
         );
 
         products.forEach(System.out::println);
