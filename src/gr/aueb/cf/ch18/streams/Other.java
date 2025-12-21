@@ -40,7 +40,6 @@ public class Other {
                 .average()
                 .orElse(0);
 
-
         List<String> top3Expensive = products.stream()
                 .sorted(Comparator.comparingDouble(Product::getPrice).reversed())
                 .limit(3)
@@ -60,13 +59,32 @@ public class Other {
                 .findFirst()
                 .orElse(new Product("Default", 0, 0));
 
-        System.out.println(firstProduct);
+        System.out.println(firstProduct2);
+
+        Product firstProduct3 = products.stream()
+                .filter(p -> p.getPrice() > 1500) // no product matches
+                .findFirst()
+                .orElseThrow();
+
+        System.out.println(firstProduct3);
+
+        Product firstProduct4 = products.stream()
+                .filter(p -> p.getPrice() > 1500) // no product matches
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("No product found"));
+
+        System.out.println(firstProduct4);
+
+
 
         Optional<Product> anyProduct = products.parallelStream()
                 .filter(p -> p.getPrice() > 300)
                 .findAny();
 
         anyProduct.ifPresent(System.out::println);
+
+        Product pro;
+        if (anyProduct.isPresent()) pro = anyProduct.get();
 
 
         Product anyProduct2 = products.parallelStream()
