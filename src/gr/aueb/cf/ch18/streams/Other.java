@@ -26,6 +26,10 @@ public class Other {
                 .sum();
         System.out.println("Total high-value inventory: $" + totalHighValue);
 
+        long count = products.size();
+        // count = products.stream().count();
+        System.out.println("Total products: " + count);
+
         List<String> cheapProductNames = products.stream()
                 .filter(p -> p.getPrice() < 500)
                 .map(Product::getDescription)
@@ -38,7 +42,7 @@ public class Other {
                 .filter(p -> p.getQuantity() >= 5)
                 .mapToDouble(Product::getPrice)
                 .average()
-                .orElse(0);
+                .orElse(0.0);
 
         List<String> top3Expensive = products.stream()
                 .sorted(Comparator.comparingDouble(Product::getPrice).reversed())
